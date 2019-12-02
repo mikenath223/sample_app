@@ -50,3 +50,17 @@ Processing by StaticPagesController#help as HTML
 Completed 200 OK in 195ms (Views: 190.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/static_pages/help" for 127.0.0.1 at 2019-12-02 21:04:32 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 1183ms (Views: 1136.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2019-12-02 21:04:50 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 372ms (Views: 355.0ms | ActiveRecord: 0.0ms)
+
+
