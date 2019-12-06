@@ -1,2 +1,2 @@
 ---
-BUNDLE_WITHOUT: "developmment:test:production"
+BUNDLE_WITHOUT: "production:developmment:test"
