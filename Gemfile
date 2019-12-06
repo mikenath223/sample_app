@@ -16,15 +16,12 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'webpacker', '~> 4.0'
 gem 'bootsnap', '1.4.5'
+gem 'pg'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
  gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
-
-group :production do
-  gem 'pg', '~> 0.20'
 end
 
 group :development do
