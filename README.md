@@ -8,7 +8,7 @@ Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
 ## Live version
-- https://sample-railsapp.herokuapp.com/
+- https://sample--railsapp.herokuapp.com/
 
 ## License
 
