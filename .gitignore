@@ -16,3 +16,4 @@
 
 # Ignore Spring files.
 /spring/*.pid
+node_modules
