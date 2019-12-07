@@ -100,3 +100,10 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 5124ms (Views: 5064.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-12-07 11:04:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6301.1ms)
+Completed 200 OK in 6791ms (Views: 6778.9ms | ActiveRecord: 0.0ms)
+
+
