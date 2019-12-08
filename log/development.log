@@ -395,3 +395,75 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 3929ms (Views: 3872.1ms | ActiveRecord: 0.0ms | Allocations: 110759)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-08 21:31:06 +0100
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 946.8ms | Allocations: 15797)
+  Rendered layouts/_rails_default.html.erb (Duration: 79.8ms | Allocations: 10129)
+  Rendered layouts/_shim.html.erb (Duration: 2.2ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 12.3ms | Allocations: 291)
+  Rendered layouts/_footer.html.erb (Duration: 14.1ms | Allocations: 180)
+Completed 200 OK in 1136ms (Views: 1112.4ms | ActiveRecord: 0.0ms | Allocations: 30065)
+
+
+Started GET "/help" for ::1 at 2019-12-08 21:32:59 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.5ms | Allocations: 105)
+  Rendered layouts/_rails_default.html.erb (Duration: 31.9ms | Allocations: 9193)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 51)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms | Allocations: 10402)
+
+
+Started GET "/about" for ::1 at 2019-12-08 21:33:02 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 4.6ms | Allocations: 107)
+  Rendered layouts/_rails_default.html.erb (Duration: 39.6ms | Allocations: 9193)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.0ms | Allocations: 10408)
+
+
+Started GET "/contact" for ::1 at 2019-12-08 21:33:05 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 11.8ms | Allocations: 102)
+  Rendered layouts/_rails_default.html.erb (Duration: 26.7ms | Allocations: 9193)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 51)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.0ms | Allocations: 10371)
+
+
+Started GET "/contact" for ::1 at 2019-12-08 21:43:06 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.2ms | Allocations: 8)
+  Rendered layouts/_rails_default.html.erb (Duration: 6317.6ms | Allocations: 71899)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 110)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 49)
+Completed 200 OK in 6444ms (Views: 6330.4ms | ActiveRecord: 0.0ms | Allocations: 72866)
+
+
