@@ -16,6 +16,11 @@
 
 # Ignore Spring files.
 /spring/*.pid
+<<<<<<< HEAD
+=======
+node_modules
+
+>>>>>>> filling-in-layout
 /public/packs
 /public/packs-test
 /node_modules
