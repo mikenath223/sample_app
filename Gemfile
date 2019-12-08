@@ -18,6 +18,8 @@ gem 'bootsnap', '1.4.5'
 gem 'bootstrap-sass', '3.3.7'
 gem 'minitest'
 gem 'minitest-reporters'
+gem 'rails-controller-testing'
+gem 'pg'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do

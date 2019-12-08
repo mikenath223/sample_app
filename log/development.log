@@ -543,3 +543,47 @@ Processing by StaticPagesController#about as HTML
 Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.0ms | Allocations: 10341)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/about" for ::1 at 2019-12-08 19:08:41 +0100
+  [1m[35m (24.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 48.8ms | Allocations: 334)
+  Rendered layouts/_rails_default.html.erb (Duration: 1484.3ms | Allocations: 24576)
+  Rendered layouts/_shim.html.erb (Duration: 22.5ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 9.1ms | Allocations: 294)
+  Rendered layouts/_footer.html.erb (Duration: 21.6ms | Allocations: 179)
+Completed 200 OK in 1816ms (Views: 1739.4ms | ActiveRecord: 0.0ms | Allocations: 29045)
+
+
+Started GET "/" for ::1 at 2019-12-08 19:08:50 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 95.1ms | Allocations: 773)
+  Rendered layouts/_rails_default.html.erb (Duration: 44.5ms | Allocations: 9023)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 115)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 51)
+Completed 200 OK in 153ms (Views: 148.9ms | ActiveRecord: 0.0ms | Allocations: 10901)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
