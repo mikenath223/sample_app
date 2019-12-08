@@ -6,7 +6,7 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*
+log
 /tmp/*
 !/log/.keep
 !/tmp/.keep
@@ -16,14 +16,10 @@
 
 # Ignore Spring files.
 /spring/*.pid
-<<<<<<< HEAD
-=======
-node_modules
+/node_modules
 
->>>>>>> filling-in-layout
 /public/packs
 /public/packs-test
-/node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
