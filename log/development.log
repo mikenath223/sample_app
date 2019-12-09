@@ -594,3 +594,65 @@ Change:
 To:
   >> JbuilderHandler.call(template, source)
  (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/contact" for ::1 at 2019-12-09 08:54:24 +0100
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 5.5ms | Allocations: 329)
+  Rendered layouts/_rails_default.html.erb (Duration: 1579.3ms | Allocations: 110986)
+  Rendered layouts/_shim.html.erb (Duration: 0.9ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 294)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 179)
+Completed 200 OK in 1663ms (Views: 1630.5ms | ActiveRecord: 0.0ms | Allocations: 115065)
+
+
+Started GET "/" for ::1 at 2019-12-09 08:54:31 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 15.3ms | Allocations: 791)
+  Rendered layouts/_rails_default.html.erb (Duration: 28.6ms | Allocations: 9146)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 60ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 11021)
+
+
+Started GET "/signup" for ::1 at 2019-12-09 08:54:36 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 24.9ms | Allocations: 100)
+  Rendered layouts/_rails_default.html.erb (Duration: 49.9ms | Allocations: 9259)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 117)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 10910)
+
+
