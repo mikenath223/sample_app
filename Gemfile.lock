@@ -117,7 +117,7 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.13.0)
-    minitest-reporters (1.1.14)
+    minitest-reporters (1.4.2)
       ansi
       builder
       minitest (>= 5.0)
@@ -127,28 +127,10 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
-<<<<<<< HEAD
-<<<<<<< HEAD
-    pg (0.21.0)
-    public_suffix (4.0.1)
-    puma (4.3.0)
-      nio4r (~> 2.0)
-=======
-    notiffany (0.1.3)
-      nenv (~> 0.1)
-      shellany (~> 0.0)
     pg (0.20.0)
-    pry (0.12.2)
-      coderay (~> 1.1.0)
-      method_source (~> 0.9.0)
-    puma (3.12.2)
->>>>>>> d7d75d486339a75dd03062312c94e90e62769371
-=======
-    pg (1.1.4)
     public_suffix (4.0.1)
     puma (4.3.0)
       nio4r (~> 2.0)
->>>>>>> filling-in-layout
     rack (2.0.7)
     rack-proxy (0.6.5)
       rack
@@ -169,13 +151,10 @@ GEM
       bundler (>= 1.3.0)
       railties (= 6.0.1)
       sprockets-rails (>= 2.0.0)
-<<<<<<< HEAD
-=======
     rails-controller-testing (1.0.4)
       actionpack (>= 5.0.1.x)
       actionview (>= 5.0.1.x)
       activesupport (>= 5.0.1.x)
->>>>>>> filling-in-layout
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -192,10 +171,6 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
-<<<<<<< HEAD
-    ruby_dep (1.5.0)
-    rubyzip (2.0.0)
-=======
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
@@ -204,7 +179,6 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
->>>>>>> filling-in-layout
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.2.1)
@@ -265,22 +239,11 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (= 1.4.5)
-<<<<<<< HEAD
-=======
   bootstrap-sass (= 3.3.7)
->>>>>>> filling-in-layout
   byebug
   capybara (>= 2.15)
   coffee-rails (= 5.0.0)
   jbuilder (= 2.7.0)
-<<<<<<< HEAD
-<<<<<<< HEAD
-  jquery-rails (= 4.3.5)
-  listen (>= 3.0.5, < 3.2)
-  pg
-  puma (= 4.3.0)
-  rails (~> 6.0.1)
-=======
   jquery-rails (= 4.3.5)
   listen (>= 3.0.5, < 3.2)
   minitest
@@ -289,29 +252,11 @@ DEPENDENCIES
   puma (= 4.3.0)
   rails (~> 6.0.1)
   rails-controller-testing
->>>>>>> filling-in-layout
   sass-rails (= 6.0.0)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
-<<<<<<< HEAD
-=======
-  jquery-rails (= 4.3.1)
-  listen (= 3.1.5)
-  minitest (= 5.10.3)
-  minitest-reporters (= 1.1.14)
-  pg (= 0.20.0)
-  puma (= 3.12.2)
-  rails (~> 5.2)
-  rails-controller-testing (= 1.0.2)
-  sass-rails (= 5.0.6)
-  spring (= 2.0.2)
-  spring-watcher-listen (= 2.0.1)
-  sqlite3 (= 1.3.13)
->>>>>>> d7d75d486339a75dd03062312c94e90e62769371
-=======
->>>>>>> filling-in-layout
   turbolinks (= 5.0.1)
   tzinfo-data
   uglifier (= 3.2.0)
