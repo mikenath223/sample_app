@@ -7,7 +7,7 @@ ruby '2.6.5'
 gem 'rails', '~> 6.0.1'
 
 gem 'uglifier',     '3.2.0'
-gem 'puma',         '4.3.0'
+gem 'puma',         '4.3.1'
 gem 'sass-rails',   '6.0.0'
 gem 'coffee-rails', '5.0.0'
 gem 'jquery-rails', '4.3.5'
