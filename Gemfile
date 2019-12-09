@@ -15,6 +15,10 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'webpacker', '~> 4.0'
 gem 'bootsnap', '1.4.5'
+gem 'bootstrap-sass', '3.3.7'
+gem 'minitest'
+gem 'minitest-reporters'
+gem 'rails-controller-testing'
 gem 'pg'
 
 # Use sqlite3 as the database for Active Record

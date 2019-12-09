@@ -8,6 +8,7 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
+log
 /log/*
 /tmp/*
 !/log/.keep
@@ -18,6 +19,8 @@
 
 # Ignore Spring files.
 /spring/*.pid
+node_modules
+
 /public/packs
 /public/packs-test
 /node_modules

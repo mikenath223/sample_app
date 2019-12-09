@@ -7,13 +7,10 @@ This is the sample application for
 Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
-## Built With
+## Live version
+- https://sample--railsapp.herokuapp.com/
 
-- Ruby v 2.6.5
-- Rails v 6.0.1
-- Love and Passion for Coding :)
-
-## 📝 License
+## License
 
 All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
 is available jointly under the MIT License and the Beerware License. See
