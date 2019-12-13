@@ -756,3 +756,46 @@ Migrating to CreateUsers (20191213153217)
   [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
   [1m[36mUser Create (20.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mike Nath"], ["email", "mike@mail.com"], ["created_at", "2019-12-13 15:54:53.307346"], ["updated_at", "2019-12-13 15:54:53.307346"]]
   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndexToUsersEmail (20191213181514)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (11.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndexToUsersEmail (20191213181514)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndexToUsersEmail (20191213181514)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191213181514"]]
+  [1m[35m (182.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
