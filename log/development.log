@@ -93,48 +93,25 @@ Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.0ms)
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
-DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
-now accept two parameters, the view object and the source for the view object.
-Change:
-  >> JbuilderHandler.call(template)
-To:
-  >> JbuilderHandler.call(template, source)
- (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
-DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
-now accept two parameters, the view object and the source for the view object.
-Change:
-  >> JbuilderHandler.call(template)
-To:
-  >> JbuilderHandler.call(template, source)
- (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
-DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
-now accept two parameters, the view object and the source for the view object.
-Change:
-  >> JbuilderHandler.call(template)
-To:
-  >> JbuilderHandler.call(template, source)
- (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
-Started GET "/" for ::1 at 2019-12-06 22:24:56 +0100
-  [1m[35m (13.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for 127.0.0.1 at 2019-12-07 07:35:56 +0100
 Processing by StaticPagesController#home as HTML
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 20.1ms | Allocations: 309)
-Completed 200 OK in 4460ms (Views: 4399.6ms | ActiveRecord: 0.0ms | Allocations: 53197)
+  Rendered static_pages/home.html.erb within layouts/application (4911.4ms)
+Completed 200 OK in 5124ms (Views: 5064.1ms | ActiveRecord: 0.0ms)
 
 
-DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
-now accept two parameters, the view object and the source for the view object.
-Change:
-  >> JbuilderHandler.call(template)
-To:
-  >> JbuilderHandler.call(template, source)
- (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
-Started GET "/" for ::1 at 2019-12-06 22:49:53 +0100
-  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for 127.0.0.1 at 2019-12-07 11:04:18 +0100
 Processing by StaticPagesController#home as HTML
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 40.0ms | Allocations: 309)
-Completed 200 OK in 2068ms (Views: 1955.6ms | ActiveRecord: 0.0ms | Allocations: 14179)
+  Rendered static_pages/home.html.erb within layouts/application (6301.1ms)
+Completed 200 OK in 6791ms (Views: 6778.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-12-07 11:30:21 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (11715.8ms)
+Completed 200 OK in 11898ms (Views: 11877.6ms | ActiveRecord: 0.0ms)
 
 
 DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
@@ -165,136 +142,216 @@ Change:
 To:
   >> JbuilderHandler.call(template, source)
  (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
-DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
-now accept two parameters, the view object and the source for the view object.
-Change:
-  >> JbuilderHandler.call(template)
-To:
-  >> JbuilderHandler.call(template, source)
- (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
-DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
-now accept two parameters, the view object and the source for the view object.
-Change:
-  >> JbuilderHandler.call(template)
-To:
-  >> JbuilderHandler.call(template, source)
- (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
-Started GET "/" for ::1 at 2019-12-06 23:36:20 +0100
-  [1m[35m (17.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-12-07 13:23:41 +0100
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1118.9ms | Allocations: 40331)
+Completed 500 Internal Server Error in 1218ms (ActiveRecord: 0.0ms | Allocations: 42816)
+
+
+Started GET "/" for ::1 at 2019-12-07 13:28:21 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 63.1ms | Allocations: 14872)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.0ms | Allocations: 15352)
+
+
+Started GET "/" for ::1 at 2019-12-07 13:28:26 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 47.3ms | Allocations: 10125)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 0.0ms | Allocations: 19621)
+
+
   
-ActiveRecord::PendingMigrationError (
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap-sprockets.
+        on line 1:1 of app/assets/stylesheets/custom.scss
+>> @import "bootstrap-sprockets";
 
-Migrations are pending. To resolve this issue, run:
-
-        rails db:migrate RAILS_ENV=development
-
+   ^
 ):
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all',
+    7:                                               'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/shim' %>
   
-activerecord (6.0.1) lib/active_record/migration.rb:587:in `check_pending!'
-activerecord (6.0.1) lib/active_record/migration.rb:564:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
-actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
-web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (6.0.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.0) lib/puma/configuration.rb:228:in `call'
-puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
-puma (4.3.0) lib/puma/server.rb:470:in `process_client'
-puma (4.3.0) lib/puma/server.rb:328:in `block in run'
-puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/" for ::1 at 2019-12-06 23:36:24 +0100
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
-ActiveRecord::PendingMigrationError (
-
-Migrations are pending. To resolve this issue, run:
-
-        rails db:migrate RAILS_ENV=development
-
-):
-  
-activerecord (6.0.1) lib/active_record/migration.rb:587:in `check_pending!'
-activerecord (6.0.1) lib/active_record/migration.rb:564:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
-activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
-actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
-web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
-web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
-web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
-web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
-activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
-railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.7) lib/rack/method_override.rb:22:in `call'
-rack (2.0.7) lib/rack/runtime.rb:22:in `call'
-activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
-rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
-actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
-webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
-rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
-railties (6.0.1) lib/rails/engine.rb:526:in `call'
-puma (4.3.0) lib/puma/configuration.rb:228:in `call'
-puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
-puma (4.3.0) lib/puma/server.rb:470:in `process_client'
-puma (4.3.0) lib/puma/server.rb:328:in `block in run'
-puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started POST "/rails/actions" for ::1 at 2019-12-06 23:37:06 +0100
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateStaticPages (20191206223205)
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (43.6ms)[0m  [1m[35mCREATE TABLE "static_pages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mprimary::SchemaMigration Create (2.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191206223205"]]
-  [1m[35m (228.7ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-Started GET "/" for ::1 at 2019-12-06 23:37:07 +0100
-  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:6
+DEPRECATION WARNING: ActionView::Base instances should be constructed with a lookup context, assignments, and a controller. (called from new at /home/mike/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/web-console-3.5.1/lib/web_console/template.rb:19)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-07 19:27:46 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
 Processing by StaticPagesController#home as HTML
   Rendering static_pages/home.html.erb within layouts/application
-  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 90)
-Completed 200 OK in 2715ms (Views: 2693.8ms | ActiveRecord: 0.0ms | Allocations: 55627)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 36.3ms | Allocations: 598)
+Completed 500 Internal Server Error in 591ms (ActiveRecord: 0.0ms | Allocations: 9845)
 
 
-Started GET "/contact" for ::1 at 2019-12-06 23:37:30 +0100
   
-ActionController::RoutingError (No route matches [GET] "/contact"):
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap-sprockets.
+        on line 1:1 of app/assets/stylesheets/custom.scss
+>> @import "bootstrap-sprockets";
+
+   ^
+):
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all',
+    7:                                               'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/shim' %>
+  
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:6
+DEPRECATION WARNING: ActionView::Base instances should be constructed with a lookup context, assignments, and a controller. (called from new at /home/mike/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/web-console-3.5.1/lib/web_console/template.rb:19)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-07 19:38:19 +0100
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 225.5ms | Allocations: 4634)
+Completed 500 Internal Server Error in 628ms (ActiveRecord: 0.0ms | Allocations: 17973)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap-sprockets.
+        on line 1:1 of app/assets/stylesheets/custom.scss
+>> @import "bootstrap-sprockets";
+
+   ^
+):
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all',
+    7:                                               'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/shim' %>
+  
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:6
+Started GET "/" for ::1 at 2019-12-07 19:48:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 598)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 9844)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap-sprockets.
+        on line 1:1 of app/assets/stylesheets/custom.scss
+>> @import "bootstrap-sprockets";
+
+   ^
+):
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all',
+    7:                                               'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:     <%= render 'layouts/shim' %>
+  
+app/assets/stylesheets/custom.scss:1
+app/views/layouts/application.html.erb:6
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-07 19:49:08 +0100
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2214.4ms | Allocations: 100654)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 86)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 235)
+  Rendered layouts/_footer.html.erb (Duration: 2.1ms | Allocations: 161)
+Completed 200 OK in 2484ms (Views: 2457.0ms | ActiveRecord: 0.0ms | Allocations: 143209)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-07 21:09:04 +0100
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1177.2ms | Allocations: 77702)
+  Rendered layouts/_rails_default.html.erb (Duration: 173.8ms | Allocations: 25297)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 235)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 161)
+Completed 200 OK in 1377ms (Views: 1365.1ms | ActiveRecord: 0.0ms | Allocations: 107066)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-07 21:54:39 +0100
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3535.8ms | Allocations: 75017)
+  Rendered layouts/_rails_default.html.erb (Duration: 456.0ms | Allocations: 27297)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 235)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 161)
+Completed 200 OK in 4124ms (Views: 4065.0ms | ActiveRecord: 0.0ms | Allocations: 106377)
+
+
+Started GET "/help" for ::1 at 2019-12-07 21:54:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/help"):
   
 actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
@@ -326,39 +383,48 @@ puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
 puma (4.3.0) lib/puma/server.rb:470:in `process_client'
 puma (4.3.0) lib/puma/server.rb:328:in `block in run'
 puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
-Started GET "/static_pages/contact" for ::1 at 2019-12-06 23:38:02 +0100
-Processing by StaticPagesController#contact as HTML
-  Rendering static_pages/contact.html.erb within layouts/application
-  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.6ms | Allocations: 105)
-Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 5283)
-
-
-Started GET "/static_pages/help" for ::1 at 2019-12-06 23:38:13 +0100
+Started GET "/static_pages/help" for ::1 at 2019-12-07 21:56:09 +0100
 Processing by StaticPagesController#help as HTML
   Rendering static_pages/help.html.erb within layouts/application
-  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.5ms | Allocations: 105)
-Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 5251)
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.7ms | Allocations: 107)
+  Rendered layouts/_rails_default.html.erb (Duration: 27.5ms | Allocations: 9088)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 31)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms | Allocations: 10234)
 
 
-Started GET "/static_pages/help" for ::1 at 2019-12-06 23:39:25 +0100
+Started GET "/static_pages/help" for ::1 at 2019-12-07 21:57:02 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.6ms | Allocations: 101)
+  Rendered layouts/_rails_default.html.erb (Duration: 34.4ms | Allocations: 9189)
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 224)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 154)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.0ms | Allocations: 12042)
+
+
+Started GET "/static_pages/help" for ::1 at 2019-12-07 21:57:25 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_rails_default.html.erb (Duration: 31.5ms | Allocations: 9066)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 31)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 9979)
+
+
+Started GET "/static_pages/help" for ::1 at 2019-12-07 21:57:27 +0100
 Processing by StaticPagesController#help as HTML
   Rendering static_pages/help.html.erb within layouts/application
   Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
-Completed 200 OK in 86ms (Views: 83.0ms | ActiveRecord: 0.0ms | Allocations: 13701)
-
-
-Started GET "/static_pages/help" for ::1 at 2019-12-06 23:39:38 +0100
-Processing by StaticPagesController#help as HTML
-  Rendering static_pages/help.html.erb within layouts/application
-  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
-Completed 200 OK in 200ms (Views: 198.3ms | ActiveRecord: 0.0ms | Allocations: 14428)
-
-
-Started GET "/static_pages/help" for ::1 at 2019-12-06 23:39:42 +0100
-Processing by StaticPagesController#help as HTML
-  Rendering static_pages/help.html.erb within layouts/application
-  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
-Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 5031)
+  Rendered layouts/_rails_default.html.erb (Duration: 31.0ms | Allocations: 9063)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 31)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 9961)
 
 
 DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
@@ -368,6 +434,115 @@ Change:
 To:
   >> JbuilderHandler.call(template, source)
  (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/helf" for ::1 at 2019-12-07 23:08:46 +0100
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/helf"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/help" for ::1 at 2019-12-07 23:08:53 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.5ms | Allocations: 106)
+  Rendered layouts/_rails_default.html.erb (Duration: 340.2ms | Allocations: 24577)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 234)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 161)
+Completed 200 OK in 360ms (Views: 357.4ms | ActiveRecord: 0.0ms | Allocations: 27613)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/help" for ::1 at 2019-12-07 23:20:49 +0100
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.6ms | Allocations: 331)
+  Rendered layouts/_rails_default.html.erb (Duration: 101.8ms | Allocations: 24575)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 293)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 180)
+Completed 200 OK in 129ms (Views: 117.4ms | ActiveRecord: 0.0ms | Allocations: 29052)
+
+
+Started GET "/" for ::1 at 2019-12-07 23:20:51 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 12.0ms | Allocations: 773)
+  Rendered layouts/_rails_default.html.erb (Duration: 32.3ms | Allocations: 9023)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 115)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms | Allocations: 10893)
+
+
+Started GET "/help" for ::1 at 2019-12-07 23:20:55 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_rails_default.html.erb (Duration: 43.5ms | Allocations: 9133)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 110)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms | Allocations: 10098)
+
+
+Started GET "/contact" for ::1 at 2019-12-07 23:21:03 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 2.9ms | Allocations: 102)
+  Rendered layouts/_rails_default.html.erb (Duration: 29.2ms | Allocations: 9135)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 51)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 10314)
+
+
+Started GET "/about" for ::1 at 2019-12-07 23:21:05 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 106)
+  Rendered layouts/_rails_default.html.erb (Duration: 44.3ms | Allocations: 9134)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.0ms | Allocations: 10341)
+
+
 DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
 now accept two parameters, the view object and the source for the view object.
 Change:
@@ -495,3 +670,235 @@ Change:
 To:
   >> JbuilderHandler.call(template, source)
  (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/contact" for ::1 at 2019-12-09 08:54:24 +0100
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 5.5ms | Allocations: 329)
+  Rendered layouts/_rails_default.html.erb (Duration: 1579.3ms | Allocations: 110986)
+  Rendered layouts/_shim.html.erb (Duration: 0.9ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 294)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 179)
+Completed 200 OK in 1663ms (Views: 1630.5ms | ActiveRecord: 0.0ms | Allocations: 115065)
+
+
+Started GET "/" for ::1 at 2019-12-09 08:54:31 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 15.3ms | Allocations: 791)
+  Rendered layouts/_rails_default.html.erb (Duration: 28.6ms | Allocations: 9146)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 60ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 11021)
+
+
+Started GET "/signup" for ::1 at 2019-12-09 08:54:36 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 24.9ms | Allocations: 100)
+  Rendered layouts/_rails_default.html.erb (Duration: 49.9ms | Allocations: 9259)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 117)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 10910)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-09 09:40:18 +0100
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3398.2ms | Allocations: 65199)
+  Rendered layouts/_rails_default.html.erb (Duration: 234.9ms | Allocations: 43906)
+  Rendered layouts/_shim.html.erb (Duration: 26.4ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 257)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 180)
+Completed 200 OK in 3734ms (Views: 3697.9ms | ActiveRecord: 0.0ms | Allocations: 113224)
+
+
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStaticPages (20191206223205)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (25.6ms)[0m  [1m[35mDROP TABLE "static_pages"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20191206223205"]]
+  [1m[35m (34.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStaticPages (20191206223205)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "static_pages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191206223205"]]
+  [1m[35m (84.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20191213153217)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191213153217"]]
+  [1m[35m (67.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (20.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mike Nath"], ["email", "mike@mail.com"], ["created_at", "2019-12-13 15:54:53.307346"], ["updated_at", "2019-12-13 15:54:53.307346"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndexToUsersEmail (20191213181514)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (11.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndexToUsersEmail (20191213181514)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndexToUsersEmail (20191213181514)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191213181514"]]
+  [1m[35m (182.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToUsers (20191213210144)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191213210144"]]
+  [1m[35m (51.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "johndoe@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "gold@test.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Michgold"], ["email", "gold@test.com"], ["created_at", "2019-12-13 21:47:14.989840"], ["updated_at", "2019-12-13 21:47:14.989840"], ["password_digest", "$2a$10$eh4sNs4aITN01RpNIl3mmO8PQqYfR5mJqd1CVA6ZKX8j7TcZEZSk6"]]
+  [1m[35m (158.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gold@test.com"], ["LIMIT", 1]]
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Michgold"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (109.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "gold@test.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "gold@test.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "gold@test.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Mike"], ["updated_at", "2019-12-13 22:00:26.042196"], ["id", 1]]
+  [1m[35m (118.7ms)[0m  [1m[36mcommit transaction[0m

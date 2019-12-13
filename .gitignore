@@ -1,3 +1,5 @@
+/node_modules
+
 # Ignore bundler config.
 /.bundle/*
 
@@ -17,7 +19,7 @@ log
 
 # Ignore Spring files.
 /spring/*.pid
-/node_modules
+node_modules
 
 /public/packs
 /public/packs-test
