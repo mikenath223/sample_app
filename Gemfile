@@ -8,6 +8,7 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
 
+gem 'bcrypt', '3.1.12'
 gem 'bootsnap', '1.4.5'
 gem 'bootstrap-sass', '3.3.7'
 gem 'coffee-rails', '5.0.0'
