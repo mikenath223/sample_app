@@ -854,3 +854,254 @@ To:
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Mike"], ["updated_at", "2019-12-13 22:00:26.042196"], ["id", 1]]
   [1m[35m (118.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-14 20:00:13 +0100
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1702.9ms | Allocations: 16520)
+  Rendered layouts/_rails_default.html.erb (Duration: 108.9ms | Allocations: 10322)
+  Rendered layouts/_shim.html.erb (Duration: 1.8ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 14.0ms | Allocations: 257)
+  Rendered layouts/_footer.html.erb (Duration: 12.0ms | Allocations: 180)
+Completed 200 OK in 1957ms (Views: 1916.3ms | ActiveRecord: 0.0ms | Allocations: 30946)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:02:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.6ms | Allocations: 775)
+  Rendered layouts/_rails_default.html.erb (Duration: 39.6ms | Allocations: 9328)
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 246)
+  Rendered layouts/_footer.html.erb (Duration: 1.3ms | Allocations: 173)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.0ms | Allocations: 12885)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:02:21 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 649)
+  Rendered layouts/_rails_default.html.erb (Duration: 41.0ms | Allocations: 9204)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms | Allocations: 10790)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:02:24 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 648)
+  Rendered layouts/_rails_default.html.erb (Duration: 45.2ms | Allocations: 9203)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms | Allocations: 10783)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:02:26 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 648)
+  Rendered layouts/_rails_default.html.erb (Duration: 34.6ms | Allocations: 9202)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 49)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 10779)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:02:27 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8.8ms | Allocations: 648)
+  Rendered layouts/_rails_default.html.erb (Duration: 28.0ms | Allocations: 9203)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 49)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.0ms | Allocations: 10789)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:02:29 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 647)
+  Rendered layouts/_rails_default.html.erb (Duration: 52.3ms | Allocations: 9203)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.0ms | Allocations: 10791)
+
+
+Started GET "/help" for ::1 at 2019-12-14 20:02:35 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 14.3ms | Allocations: 109)
+  Rendered layouts/_rails_default.html.erb (Duration: 23.3ms | Allocations: 9316)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 10524)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:02:37 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 648)
+  Rendered layouts/_rails_default.html.erb (Duration: 44.0ms | Allocations: 9202)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms | Allocations: 10781)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:04:13 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 774)
+  Rendered layouts/_rails_default.html.erb (Duration: 2231.5ms | Allocations: 76081)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 246)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 173)
+Completed 200 OK in 2256ms (Views: 2254.8ms | ActiveRecord: 0.0ms | Allocations: 79655)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:04:49 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 775)
+  Rendered layouts/_rails_default.html.erb (Duration: 37.1ms | Allocations: 9261)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 246)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 173)
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 12825)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:04:51 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 648)
+  Rendered layouts/_rails_default.html.erb (Duration: 30.1ms | Allocations: 9137)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms | Allocations: 10723)
+
+
+Started GET "/help" for ::1 at 2019-12-14 20:04:54 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.6ms | Allocations: 100)
+  Rendered layouts/_rails_default.html.erb (Duration: 33.1ms | Allocations: 9249)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 51)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms | Allocations: 10455)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:04:56 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.3ms | Allocations: 648)
+  Rendered layouts/_rails_default.html.erb (Duration: 37.1ms | Allocations: 9135)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.0ms | Allocations: 10718)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:05:15 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 775)
+  Rendered layouts/_rails_default.html.erb (Duration: 39.2ms | Allocations: 9261)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 246)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 173)
+Completed 200 OK in 60ms (Views: 54.3ms | ActiveRecord: 0.0ms | Allocations: 12821)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:05:18 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 648)
+  Rendered layouts/_rails_default.html.erb (Duration: 23.6ms | Allocations: 9137)
+  Rendered layouts/_shim.html.erb (Duration: 0.8ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms | Allocations: 10729)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:05:21 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 647)
+  Rendered layouts/_rails_default.html.erb (Duration: 50.7ms | Allocations: 9137)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 49)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.0ms | Allocations: 10721)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:06:03 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.0ms | Allocations: 780)
+  Rendered layouts/_rails_default.html.erb (Duration: 146.8ms | Allocations: 9261)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 246)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 173)
+Completed 200 OK in 167ms (Views: 164.8ms | ActiveRecord: 0.0ms | Allocations: 12834)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:07:47 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 775)
+  Rendered layouts/_rails_default.html.erb (Duration: 38.3ms | Allocations: 9261)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 246)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 173)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.0ms | Allocations: 12820)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:08:47 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 648)
+  Rendered layouts/_rails_default.html.erb (Duration: 1252.6ms | Allocations: 67431)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 1263ms (Views: 1261.8ms | ActiveRecord: 0.0ms | Allocations: 69031)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:09:03 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 647)
+  Rendered layouts/_rails_default.html.erb (Duration: 901.4ms | Allocations: 68446)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 911ms (Views: 909.2ms | ActiveRecord: 0.0ms | Allocations: 70029)
+
+
+Started GET "/" for ::1 at 2019-12-14 20:09:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 647)
+  Rendered layouts/_rails_default.html.erb (Duration: 253.2ms | Allocations: 9180)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 262ms (Views: 260.6ms | ActiveRecord: 0.0ms | Allocations: 10760)
+
+
