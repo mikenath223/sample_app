@@ -3099,3 +3099,49 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 138ms (Views: 128.0ms | ActiveRecord: 1.2ms | Allocations: 12262)
 
 
+Started GET "/users/4" for ::1 at 2019-12-20 23:15:35 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 48)
+  Rendered layouts/_rails_default.html.erb (Duration: 220.0ms | Allocations: 9838)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 5)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.0ms | Allocations: 924)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 51)
+Completed 200 OK in 315ms (Views: 245.6ms | ActiveRecord: 3.2ms | Allocations: 17534)
+
+
+Started DELETE "/logout" for ::1 at 2019-12-20 23:15:41 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5GvKBGvCNVMm0rjr+t2qBxP1llIj8WtJZ33elaFPZyJ0NjvRtNyTPLxRDr0mJUdFFWbImY7ir2FE00Py3rM20g=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 92ms (ActiveRecord: 0.0ms | Allocations: 466)
+
+
+Started GET "/" for ::1 at 2019-12-20 23:15:41 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 14.1ms | Allocations: 780)
+  Rendered layouts/_rails_default.html.erb (Duration: 27.6ms | Allocations: 9726)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 105)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 51)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.0ms | Allocations: 12250)
+
+
+Started GET "/" for ::1 at 2019-12-20 23:17:39 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 647)
+  Rendered layouts/_rails_default.html.erb (Duration: 31.6ms | Allocations: 9724)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 100)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms | Allocations: 11525)
+
+
