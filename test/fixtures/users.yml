@@ -2,4 +2,4 @@
 mike:
   name: mike
   email: nath@mail.com
-  password_digest: <%= User.digest('kHk26JBQxB4pCSg') %>
+  password_digest: <%= User.digest('password') %>

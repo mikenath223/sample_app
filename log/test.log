@@ -4988,3 +4988,53 @@ Processing by SessionsController#create as HTML
   Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
 Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.5ms | Allocations: 2431)
   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (62.2ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (350169046, 'mike', 'nath@mail.com', '2019-12-20 21:43:54.480810', '2019-12-20 21:43:54.480810', '$2a$04$U3.dYExXkhM.A.XzcQuVuO/A3BIYPoPoHkvH44w2INe8Eh2PzYRT2');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2019-12-20 21:43:54.487196', '2019-12-20 21:43:54.487196');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2019-12-20 21:43:54.487196', '2019-12-20 21:43:54.487196')[0m
+  [1m[35m (54.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsersLoginTest: test_login_with_valid_information
+-------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2019-12-20 22:43:55 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 76.9ms | Allocations: 4367)
+  Rendered layouts/_rails_default.html.erb (Duration: 4791.1ms | Allocations: 57364)
+  Rendered layouts/_shim.html.erb (Duration: 1.3ms | Allocations: 93)
+  Rendered layouts/_header.html.erb (Duration: 9.6ms | Allocations: 420)
+  Rendered layouts/_footer.html.erb (Duration: 16.8ms | Allocations: 188)
+Completed 200 OK in 4939ms (Views: 4915.7ms | ActiveRecord: 0.0ms | Allocations: 65878)
+Started POST "/login" for 127.0.0.1 at 2019-12-20 22:44:00 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"nath@mail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nath@mail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/350169046
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 658)
+Started GET "/users/350169046" for 127.0.0.1 at 2019-12-20 22:44:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"350169046"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 12.1ms | Allocations: 182)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.9ms | Allocations: 980)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 429)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.3ms | Allocations: 3171)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m

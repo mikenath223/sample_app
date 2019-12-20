@@ -3082,3 +3082,20 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 348ms (Views: 213.1ms | ActiveRecord: 4.6ms | Allocations: 19713)
 
 
+Started GET "/users/4" for ::1 at 2019-12-20 22:44:35 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 47)
+  Rendered layouts/_rails_default.html.erb (Duration: 117.5ms | Allocations: 9837)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 765)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 138ms (Views: 128.0ms | ActiveRecord: 1.2ms | Allocations: 12262)
+
+
