@@ -3042,3 +3042,43 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.2ms | Allocations: 12183)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-12-20 22:24:16 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 176.5ms | Allocations: 653)
+  Rendered layouts/_rails_default.html.erb (Duration: 335.1ms | Allocations: 9726)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 169.2ms | Allocations: 5760)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 722ms (Views: 696.5ms | ActiveRecord: 1.1ms | Allocations: 17404)
+
+
+Started GET "/users/4" for ::1 at 2019-12-20 22:30:29 +0100
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 20.4ms | Allocations: 176)
+  Rendered layouts/_rails_default.html.erb (Duration: 75.6ms | Allocations: 9962)
+  Rendered layouts/_shim.html.erb (Duration: 0.9ms | Allocations: 82)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 74.1ms | Allocations: 1204)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 173)
+Completed 200 OK in 348ms (Views: 213.1ms | ActiveRecord: 4.6ms | Allocations: 19713)
+
+

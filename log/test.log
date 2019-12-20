@@ -4857,3 +4857,134 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
 Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2875)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (144.2ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (762146111, 'Michael Example', 'michael@example.com', '2019-12-20 21:16:53.571520', '2019-12-20 21:16:53.571520', '$2a$04$NDx2nnAVWiCjYQ/JRf.h4ORhjxt7PiKBw8A9NryV73jZfkOQ90lSa');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2019-12-20 21:16:53.585785', '2019-12-20 21:16:53.585785');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2019-12-20 21:16:53.585785', '2019-12-20 21:16:53.585785')[0m
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsersLoginTest: test_login_with_valid_information
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (26.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (211.3ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (762146111, 'Michael Example', 'michael@example.com', '2019-12-20 21:20:11.959339', '2019-12-20 21:20:11.959339', '$2a$04$znuCOjTsuxK7LdUZBl6XLeWvW75DjxM0ermSCXpU3ipfjoojNj.ye');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2019-12-20 21:20:11.964601', '2019-12-20 21:20:11.964601');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2019-12-20 21:20:11.964601', '2019-12-20 21:20:11.964601')[0m
+  [1m[35m (416.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsersLoginTest: test_login_with_valid_information
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (21.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (103.8ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (762146111, 'mike', 'nath@mail.com', '2019-12-20 21:25:14.338969', '2019-12-20 21:25:14.338969', '$2a$04$wfValhA53D.m3qhVTrkSO..bq1Yz8aUCKgveQ88.OTzvIBUGRg3OW');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2019-12-20 21:25:14.341767', '2019-12-20 21:25:14.341767');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2019-12-20 21:25:14.341767', '2019-12-20 21:25:14.341767')[0m
+  [1m[35m (111.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsersLoginTest: test_login_with_valid_information
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.3ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (762146111, 'mike', 'nath@mail.com', '2019-12-20 21:26:27.398749', '2019-12-20 21:26:27.398749', '$2a$04$/qlTynxOC490.LY5eES8H.uwi/OUXOBTLzKB.Ec24o/wPzE46rHM.');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2019-12-20 21:26:27.401995', '2019-12-20 21:26:27.401995');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2019-12-20 21:26:27.401995', '2019-12-20 21:26:27.401995')[0m
+  [1m[35m (131.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsersLoginTest: test_login_with_valid_information
+-------------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (7.8ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (350169046, 'mike', 'nath@mail.com', '2019-12-20 21:26:45.357802', '2019-12-20 21:26:45.357802', '$2a$04$GriawAF5AxW0NyN8Y7bSUeOpBSIlAX2PwApprCLTrXSUc1woJEXAS');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2019-12-20 21:26:45.360525', '2019-12-20 21:26:45.360525');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2019-12-20 21:26:45.360525', '2019-12-20 21:26:45.360525')[0m
+  [1m[35m (73.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+UsersLoginTest: test_login_with_valid_information
+-------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2019-12-20 22:26:45 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 79.5ms | Allocations: 4367)
+  Rendered layouts/_rails_default.html.erb (Duration: 6243.0ms | Allocations: 90626)
+  Rendered layouts/_shim.html.erb (Duration: 1.2ms | Allocations: 98)
+  Rendered layouts/_header.html.erb (Duration: 9.6ms | Allocations: 420)
+  Rendered layouts/_footer.html.erb (Duration: 15.1ms | Allocations: 188)
+Completed 200 OK in 6443ms (Views: 6418.0ms | ActiveRecord: 0.0ms | Allocations: 99144)
+Started POST "/login" for 127.0.0.1 at 2019-12-20 22:26:52 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"nath@mail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nath@mail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 396)
+  Rendered layouts/_rails_default.html.erb (Duration: 11.0ms | Allocations: 979)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 111)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.5ms | Allocations: 2431)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
