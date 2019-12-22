@@ -3328,3 +3328,137 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms | Allocations: 11714)
 
 
+Started GET "/login" for ::1 at 2019-12-22 09:57:32 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 543.4ms | Allocations: 4829)
+  Rendered layouts/_rails_default.html.erb (Duration: 4766.4ms | Allocations: 81672)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 408)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 173)
+Completed 200 OK in 5638ms (Views: 5575.7ms | ActiveRecord: 0.0ms | Allocations: 89677)
+
+
+Started GET "/login" for ::1 at 2019-12-22 09:57:39 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 569)
+  Rendered layouts/_rails_default.html.erb (Duration: 51.8ms | Allocations: 9823)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 121)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 0.0ms | Allocations: 11575)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:01:42 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 564)
+  Rendered layouts/_rails_default.html.erb (Duration: 1090.8ms | Allocations: 70835)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 1099ms (Views: 1097.7ms | ActiveRecord: 0.0ms | Allocations: 72581)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:02:03 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 564)
+  Rendered layouts/_rails_default.html.erb (Duration: 917.9ms | Allocations: 70803)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 927ms (Views: 925.3ms | ActiveRecord: 0.0ms | Allocations: 72549)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:02:36 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 274.3ms | Allocations: 1229)
+  Rendered layouts/_rails_default.html.erb (Duration: 3554.7ms | Allocations: 79967)
+  Rendered layouts/_shim.html.erb (Duration: 0.9ms | Allocations: 87)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 408)
+  Rendered layouts/_footer.html.erb (Duration: 4.7ms | Allocations: 173)
+Completed 200 OK in 3929ms (Views: 3926.4ms | ActiveRecord: 0.0ms | Allocations: 84494)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:03:01 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 568)
+  Rendered layouts/_rails_default.html.erb (Duration: 925.5ms | Allocations: 71256)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 934ms (Views: 932.2ms | ActiveRecord: 0.0ms | Allocations: 73015)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:03:12 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 564)
+  Rendered layouts/_rails_default.html.erb (Duration: 873.1ms | Allocations: 71820)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 880ms (Views: 878.9ms | ActiveRecord: 0.0ms | Allocations: 73563)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:03:48 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 564)
+  Rendered layouts/_rails_default.html.erb (Duration: 147.9ms | Allocations: 9813)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 156ms (Views: 154.7ms | ActiveRecord: 0.0ms | Allocations: 11541)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:04:49 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 564)
+  Rendered layouts/_rails_default.html.erb (Duration: 943.4ms | Allocations: 70322)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 49)
+Completed 200 OK in 962ms (Views: 960.0ms | ActiveRecord: 0.0ms | Allocations: 72066)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:05:07 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 564)
+  Rendered layouts/_rails_default.html.erb (Duration: 830.2ms | Allocations: 70846)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 839ms (Views: 837.0ms | ActiveRecord: 0.0ms | Allocations: 72591)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:05:25 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 564)
+  Rendered layouts/_rails_default.html.erb (Duration: 1099.5ms | Allocations: 70785)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 1109ms (Views: 1107.6ms | ActiveRecord: 0.0ms | Allocations: 72515)
+
+
+Started GET "/login" for ::1 at 2019-12-22 10:05:48 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 564)
+  Rendered layouts/_rails_default.html.erb (Duration: 1186.0ms | Allocations: 71317)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 1193ms (Views: 1191.9ms | ActiveRecord: 0.0ms | Allocations: 73070)
+
+
