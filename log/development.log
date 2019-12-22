@@ -3169,3 +3169,162 @@ Migrating to AddRememberDigestToUsers (20191221184256)
   [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2019-12-22 07:06:32 +0100
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3244.6ms | Allocations: 17904)
+  Rendered layouts/_rails_default.html.erb (Duration: 208.0ms | Allocations: 11001)
+  Rendered layouts/_shim.html.erb (Duration: 13.1ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 67.8ms | Allocations: 437)
+  Rendered layouts/_footer.html.erb (Duration: 23.5ms | Allocations: 180)
+Completed 200 OK in 3794ms (Views: 3714.7ms | ActiveRecord: 0.0ms | Allocations: 33491)
+
+
+Started GET "/login" for ::1 at 2019-12-22 07:06:44 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 547.9ms | Allocations: 4286)
+  Rendered layouts/_rails_default.html.erb (Duration: 44.6ms | Allocations: 9836)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 121)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 51)
+Completed 200 OK in 613ms (Views: 610.2ms | ActiveRecord: 0.0ms | Allocations: 15883)
+
+
+Started POST "/login" for ::1 at 2019-12-22 07:06:48 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4HFJ0v+verSAy6Lp4wXwFc9zIAjnnlC8RMqSnQHUPI23nZJBVYZNNnXK7BRjA+IIDX9Z5w9e5Tz1MbLKbb+r4A==", "session"=>{"email"=>"nath@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (212.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nath@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:27:in `remember'
+  [1m[36mUser Update (42.9ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$10$fJ9MUbnuqMtjLXruEVNtWepQetyLtmBTfLVT0H.0ipeOL1sRhp1lS"], ["updated_at", "2019-12-22 06:06:49.110782"], ["id", 4]]
+  ↳ app/models/user.rb:27:in `remember'
+  [1m[35m (32.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:27:in `remember'
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 839ms (ActiveRecord: 290.7ms | Allocations: 11391)
+
+
+Started GET "/users/4" for ::1 at 2019-12-22 07:06:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 59.5ms | Allocations: 181)
+  Rendered layouts/_rails_default.html.erb (Duration: 38.2ms | Allocations: 9839)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 872)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 51)
+Completed 200 OK in 116ms (Views: 110.4ms | ActiveRecord: 0.7ms | Allocations: 13221)
+
+
+Started GET "/users/4" for ::1 at 2019-12-22 07:08:31 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (31.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 46)
+  Rendered layouts/_rails_default.html.erb (Duration: 1436.3ms | Allocations: 9838)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 756)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 49)
+Completed 200 OK in 1484ms (Views: 1447.2ms | ActiveRecord: 31.7ms | Allocations: 12278)
+
+
+Started GET "/" for ::1 at 2019-12-22 07:08:42 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 536.8ms | Allocations: 653)
+  Rendered layouts/_rails_default.html.erb (Duration: 26.6ms | Allocations: 9726)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 742)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 51)
+Completed 200 OK in 582ms (Views: 576.0ms | ActiveRecord: 0.4ms | Allocations: 12216)
+
+
+Started GET "/signup" for ::1 at 2019-12-22 07:08:48 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 183.0ms | Allocations: 194)
+  Rendered users/new.html.erb within layouts/application (Duration: 244.9ms | Allocations: 1745)
+  Rendered layouts/_rails_default.html.erb (Duration: 34.4ms | Allocations: 9835)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 5)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 754)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 300ms (Views: 288.9ms | ActiveRecord: 0.5ms | Allocations: 13603)
+
+
+Started GET "/" for ::1 at 2019-12-22 07:08:51 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 652)
+  Rendered layouts/_rails_default.html.erb (Duration: 44.3ms | Allocations: 9726)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.7ms | Allocations: 754)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 51)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.4ms | Allocations: 12223)
+
+
+Started GET "/" for ::1 at 2019-12-22 08:20:21 +0100
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 509.4ms | Allocations: 17895)
+  Rendered layouts/_rails_default.html.erb (Duration: 158.4ms | Allocations: 11002)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 90)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 60.8ms | Allocations: 7911)
+  Rendered layouts/_footer.html.erb (Duration: 7.6ms | Allocations: 180)
+Completed 200 OK in 809ms (Views: 773.4ms | ActiveRecord: 3.2ms | Allocations: 41011)
+
+
+Started DELETE "/logout" for ::1 at 2019-12-22 08:20:28 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EzaaDQ/R5p8c8yDhsnUb+amwbVpblHNtV5Og6iMipEGDa2vY0M9A8IZwlrdujfa7ryMzkfaHt0V0PT2NXN71sQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:16:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37:in `forget'
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-12-22 07:20:28.618156"], ["id", 4]]
+  ↳ app/models/user.rb:37:in `forget'
+  [1m[35m (34.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 60ms (ActiveRecord: 35.7ms | Allocations: 4317)
+
+
+Started GET "/" for ::1 at 2019-12-22 08:20:28 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 649)
+  Rendered layouts/_rails_default.html.erb (Duration: 31.0ms | Allocations: 9883)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 128)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms | Allocations: 11714)
+
+
