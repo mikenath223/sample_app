@@ -158,6 +158,16 @@ input {
   }
 }
 
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
