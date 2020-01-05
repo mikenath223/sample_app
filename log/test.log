@@ -19237,3 +19237,603 @@ Processing by UsersController#update as HTML
   Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
 Completed 200 OK in 21ms (Views: 9.4ms | ActiveRecord: 0.8ms | Allocations: 5630)
   [1m[35m (3.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (21.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (25.0ms)[0m  [1m[31mDELETE FROM "microposts";
+DELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "microposts" ("id", "content", "user_id", "created_at", "updated_at") VALUES (980190962, 'MyText', 980190962, '2020-01-05 19:53:41.381700', '2020-01-05 19:53:41.381700');
+INSERT INTO "microposts" ("id", "content", "user_id", "created_at", "updated_at") VALUES (298486374, 'MyText', 298486374, '2020-01-05 19:53:41.381700', '2020-01-05 19:53:41.381700');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (350169046, 'mike', 'nath@mail.com', '2020-01-05 19:53:41.390738', '2020-01-05 19:53:41.390738', '$2a$04$Yz3rLZFJw7p06sw8WLeTt.7w7ojTwyqJ4cDun0VTeAyTlPsknnkBy');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (950961012, 'Michael Example', 'michael@example.com', '2020-01-05 19:53:41.390738', '2020-01-05 19:53:41.390738', '$2a$04$QGI68A7XchfdB8qscPjpn.uf8TpMCoUTfPnoWLEKZpTBNQl.HbPOy');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-05 19:53:41.395169', '2020-01-05 19:53:41.395169');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-05 19:53:41.395169', '2020-01-05 19:53:41.395169')[0m
+  [1m[35m (46.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ApplicationHelperTest: test_full_title_helper
+---------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+MicropostTest: test_content_should_be_at_most_140_characters
+------------------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+MicropostTest: test_user_id_should_be_present
+---------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+MicropostTest: test_content_should_be_present
+---------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+MicropostTest: test_should_be_valid
+-----------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2020-01-05 20:53:42 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 12134.9ms | Allocations: 61860)
+  Rendered layouts/_rails_default.html.erb (Duration: 22.0ms | Allocations: 1158)
+  Rendered layouts/_shim.html.erb (Duration: 0.9ms | Allocations: 93)
+  Rendered layouts/_header.html.erb (Duration: 22.5ms | Allocations: 440)
+  Rendered layouts/_footer.html.erb (Duration: 27.3ms | Allocations: 187)
+Completed 200 OK in 12440ms (Views: 12384.3ms | ActiveRecord: 0.0ms | Allocations: 66962)
+Started GET "/contact" for 127.0.0.1 at 2020-01-05 20:53:55 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 13.8ms | Allocations: 105)
+  Rendered layouts/_rails_default.html.erb (Duration: 3.8ms | Allocations: 990)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 150)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 2010)
+Started GET "/signup" for 127.0.0.1 at 2020-01-05 20:53:55 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 29.2ms | Allocations: 206)
+  Rendered users/new.html.erb within layouts/application (Duration: 646.6ms | Allocations: 2568)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.5ms | Allocations: 988)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 58)
+Completed 200 OK in 941ms (Views: 929.3ms | ActiveRecord: 0.0ms | Allocations: 5037)
+  [1m[35m (17.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (10.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example user"], ["email", "user@example.com"], ["created_at", "2020-01-05 19:53:56.427458"], ["updated_at", "2020-01-05 19:53:56.427458"], ["password_digest", "$2a$04$PaRXOPZfCnd0dcJaHDiLheFmfWBhzIfHaetGCBYMOxtRkM9hVrC/y"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "USER@EXAMPLE.COM"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", " "], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example,com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user_at_foo.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user.name@example."], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "foo@bar_baz.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "foo@bar+baz.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+UserTest: test_email_validation_should_accept_valid_addresses
+-------------------------------------------------------------
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "USER@foo.COM"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "A_US-ER@foo.bar.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "first.last@foo.jp"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "alice+bob@baz.cn"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_be_present_(nonblank)
+----------------------------------------------------
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_should_not_be_too_long
+------------------------------------------
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------
+UserTest: test_authenticated?_should_return_false_for_a_user_with_nil_digest
+----------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_addresses_should_be_saved_as_lower-case
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "FOO@ExAMPle.CoM"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example user"], ["email", "foo@example.com"], ["created_at", "2020-01-05 19:53:56.509460"], ["updated_at", "2020-01-05 19:53:56.509460"], ["password_digest", "$2a$04$IzixIOAIWljZIW4TblzcOeDFkB2.UWKVRvRCKoNeOl1fd/P.xYFb."]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961013], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+UsersLoginTest: test_login_with_valid_information_followed_by_logout
+--------------------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2020-01-05 20:53:56 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 57.1ms | Allocations: 1188)
+  Rendered layouts/_rails_default.html.erb (Duration: 3.7ms | Allocations: 988)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 128)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 105ms (Views: 83.1ms | ActiveRecord: 0.0ms | Allocations: 3538)
+Started POST "/login" for 127.0.0.1 at 2020-01-05 20:53:59 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"nath@mail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nath@mail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/350169046
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 797)
+Started GET "/users/350169046" for 127.0.0.1 at 2020-01-05 20:53:59 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"350169046"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 14.0ms | Allocations: 175)
+  Rendered layouts/_rails_default.html.erb (Duration: 3.2ms | Allocations: 980)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 452)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 58)
+Completed 200 OK in 44ms (Views: 23.8ms | ActiveRecord: 0.6ms | Allocations: 2753)
+Started DELETE "/logout" for 127.0.0.1 at 2020-01-05 20:53:59 +0100
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 598)
+Started DELETE "/logout" for 127.0.0.1 at 2020-01-05 20:53:59 +0100
+Processing by SessionsController#destroy as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 339)
+Started GET "/" for 127.0.0.1 at 2020-01-05 20:53:59 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 309)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.0ms | Allocations: 986)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2185)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Started GET "/login" for 127.0.0.1 at 2020-01-05 20:53:59 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 524)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.3ms | Allocations: 988)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 128)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 58)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2297)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UsersEditTest: test_successful_edit_with_friendly_forwarding
+------------------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+Started GET "/users/350169046/edit" for 127.0.0.1 at 2020-01-05 20:53:59 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"350169046"}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 286)
+Started POST "/login" for 127.0.0.1 at 2020-01-05 20:53:59 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"nath@mail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nath@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (3.1ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$x64SzmlK7vYVJO3QRXOsB.vduuCcTdh4XW.cAQhYohK6nFIJPKfwG"], ["updated_at", "2020-01-05 19:53:59.926580"], ["id", 350169046]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/350169046/edit
+Completed 302 Found in 180ms (ActiveRecord: 3.5ms | Allocations: 1111)
+Started PATCH "/users/350169046" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"Mich Gold", "email"=>"mich@gold.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"350169046"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "mich@gold.com"], ["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Update (84.4ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "email" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "Mich Gold"], ["email", "mich@gold.com"], ["updated_at", "2020-01-05 19:54:00.188454"], ["id", 350169046]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/350169046
+Completed 302 Found in 102ms (ActiveRecord: 86.1ms | Allocations: 1541)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[35m (6.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+UsersEditTest: test_unsuccessful_edit
+-------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"nath@mail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nath@mail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$I/4FmYzur1zEyPi/5YwKcuoB1hisYUXFiWtqqt/WYLJzYlFl1HlFq"], ["updated_at", "2020-01-05 19:54:00.327422"], ["id", 350169046]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/350169046
+Completed 302 Found in 12ms (ActiveRecord: 0.7ms | Allocations: 974)
+Started GET "/users/350169046/edit" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"350169046"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 24)
+  Rendered users/edit.html.erb within layouts/application (Duration: 134.8ms | Allocations: 1299)
+  Rendered layouts/_rails_default.html.erb (Duration: 8.0ms | Allocations: 978)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 211)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 155ms (Views: 149.4ms | ActiveRecord: 0.5ms | Allocations: 3681)
+Started PATCH "/users/350169046" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"foo@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "id"=>"350169046"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."id" != ? LIMIT ?[0m  [["email", "foo@invalid"], ["id", 350169046], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 2.4ms | Allocations: 504)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1489)
+  Rendered layouts/_rails_default.html.erb (Duration: 4.3ms | Allocations: 978)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 203)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
+Completed 200 OK in 41ms (Views: 19.4ms | ActiveRecord: 1.0ms | Allocations: 5733)
+  [1m[35m (7.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+UsersSignupTest: test_invalid_signup_information
+------------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 878)
+  Rendered layouts/_rails_default.html.erb (Duration: 3.5ms | Allocations: 987)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 56)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 2671)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@invalid"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 497)
+  Rendered users/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1378)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.6ms | Allocations: 978)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 56)
+Completed 200 OK in 25ms (Views: 11.6ms | ActiveRecord: 0.5ms | Allocations: 4922)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Started GET "/about" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 11.3ms | Allocations: 112)
+  Rendered layouts/_rails_default.html.erb (Duration: 4.6ms | Allocations: 990)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 150)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 2047)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Started GET "/contact" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layouts/_rails_default.html.erb (Duration: 5.3ms | Allocations: 989)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 140)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 1796)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 308)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.6ms | Allocations: 985)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 123)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 56)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2067)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Started GET "/help" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 43.0ms | Allocations: 109)
+  Rendered layouts/_rails_default.html.erb (Duration: 7.6ms | Allocations: 990)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 150)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 58)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.0ms | Allocations: 2043)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_update_when_logged_in_as_wrong_user
+-----------------------------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961012], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "michael@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$.EpnaX1LoLrYbKJpz3KYheBKFbVdisNksJ8veaU2zpXHCabJjh8GK"], ["updated_at", "2020-01-05 19:54:00.784790"], ["id", 950961012]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/950961012
+Completed 302 Found in 12ms (ActiveRecord: 0.9ms | Allocations: 974)
+Started PATCH "/users/350169046" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"mike", "email"=>"nath@mail.com"}, "id"=>"350169046"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961012], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 615)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_edit_when_logged_in_as_wrong_user
+---------------------------------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961012], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"session"=>{"email"=>"michael@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "michael@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$04$rmXfc6Al1gHBSjqUHyf6iO/CUbViRNCPE4IhLk8ivN3E7VgVaDnee"], ["updated_at", "2020-01-05 19:54:00.821965"], ["id", 950961012]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/950961012
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms | Allocations: 974)
+Started GET "/users/350169046/edit" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"350169046"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961012], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 603)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+UsersControllerTest: test_should_redirect_edit_when_not_logged_in
+-----------------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961012], ["LIMIT", 1]]
+Started GET "/users/350169046/edit" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"350169046"}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 45ms (ActiveRecord: 0.0ms | Allocations: 282)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_index_when_not_logged_in
+------------------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961012], ["LIMIT", 1]]
+Started GET "/users" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#index as HTML
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 280)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961012], ["LIMIT", 1]]
+Started GET "/signup" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 883)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.0ms | Allocations: 988)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 58)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 2686)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+UsersControllerTest: test_should_redirect_update_when_not_logged_in
+-------------------------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 350169046], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 950961012], ["LIMIT", 1]]
+Started PATCH "/users/350169046" for 127.0.0.1 at 2020-01-05 20:54:00 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"mike", "email"=>"nath@mail.com"}, "id"=>"350169046"}
+Redirected to http://www.example.com/login
+Filter chain halted as :logged_in_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 253)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (37.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (25.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (136.4ms)[0m  [1m[31mDELETE FROM "microposts";
+DELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (499495288, 'I just ate an orange!', '2020-01-05 20:05:30', '2020-01-05 20:15:31.305950');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (517500819, 'Check out the @tauday site by @mhartl: http://tauday.com', '2017-01-05 20:15:30', '2020-01-05 20:15:31.305950');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (12348100, 'Sad cats are sad: http://youtu.be/PKffm2uI4dk', '2020-01-05 18:15:30', '2020-01-05 20:15:31.305950');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (941832919, 'Writing a short test', '2020-01-05 20:15:30', '2020-01-05 20:15:31.305950');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (350169046, 'mike', 'nath@mail.com', '2020-01-05 20:15:31.310662', '2020-01-05 20:15:31.310662', '$2a$04$pPQqZsjoYH5PtUcvW8Zgv.77jAcyGFfb.x8yXycYkeWD/t83Xvu/e');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (950961012, 'Michael Example', 'michael@example.com', '2020-01-05 20:15:31.310662', '2020-01-05 20:15:31.310662', '$2a$04$D8gJjAsMPV/nuH/AspUzHuucWS5.b82lWKsKDoxsDtp2KCLOiDxCm');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-05 20:15:31.314422', '2020-01-05 20:15:31.314422');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-05 20:15:31.314422', '2020-01-05 20:15:31.314422')[0m
+  [1m[35m (3.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (33.1ms)[0m  [1m[31mDELETE FROM "microposts";
+DELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (499495288, 'I just ate an orange!', '2020-01-05 20:05:31', '2020-01-05 20:15:31.520322');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (517500819, 'Check out the @tauday site by @mhartl: http://tauday.com', '2017-01-05 20:15:31', '2020-01-05 20:15:31.520322');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (12348100, 'Sad cats are sad: http://youtu.be/PKffm2uI4dk', '2020-01-05 18:15:31', '2020-01-05 20:15:31.520322');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (941832919, 'Writing a short test', '2020-01-05 20:15:31', '2020-01-05 20:15:31.520322');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (350169046, 'mike', 'nath@mail.com', '2020-01-05 20:15:31.520502', '2020-01-05 20:15:31.520502', '$2a$04$zqU6N8xZ7nXo1P3tFlbYsO/n4XPqdkbqav1ZL5MXsT55hhzp.2UEe');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (950961012, 'Michael Example', 'michael@example.com', '2020-01-05 20:15:31.520502', '2020-01-05 20:15:31.520502', '$2a$04$UvwB3hdkEHZicJcS.YefsO/399JxRWFb/z0ieUeg9pPSpdj8tLdiu');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-05 20:15:31.520669', '2020-01-05 20:15:31.520669');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-05 20:15:31.520669', '2020-01-05 20:15:31.520669')[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.4ms)[0m  [1m[31mDELETE FROM "microposts";
+DELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (499495288, 'I just ate an orange!', '2020-01-05 20:05:31', '2020-01-05 20:15:31.572173');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (517500819, 'Check out the @tauday site by @mhartl: http://tauday.com', '2017-01-05 20:15:31', '2020-01-05 20:15:31.572173');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (12348100, 'Sad cats are sad: http://youtu.be/PKffm2uI4dk', '2020-01-05 18:15:31', '2020-01-05 20:15:31.572173');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (941832919, 'Writing a short test', '2020-01-05 20:15:31', '2020-01-05 20:15:31.572173');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (350169046, 'mike', 'nath@mail.com', '2020-01-05 20:15:31.572357', '2020-01-05 20:15:31.572357', '$2a$04$bxA4wE2gZdYWIGgSpJ/de.qt2x2/bmTyMuoPxTqxat58gflFGJxQO');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (950961012, 'Michael Example', 'michael@example.com', '2020-01-05 20:15:31.572357', '2020-01-05 20:15:31.572357', '$2a$04$f1mJL8ZpDfsaaZLmmwkOFuVUjhlfgjESwMCRs9BlxXJECWMAms8V6');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-05 20:15:31.572440', '2020-01-05 20:15:31.572440');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-05 20:15:31.572440', '2020-01-05 20:15:31.572440')[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.4ms)[0m  [1m[31mDELETE FROM "microposts";
+DELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (499495288, 'I just ate an orange!', '2020-01-05 20:05:31', '2020-01-05 20:15:31.591940');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (517500819, 'Check out the @tauday site by @mhartl: http://tauday.com', '2017-01-05 20:15:31', '2020-01-05 20:15:31.591940');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (12348100, 'Sad cats are sad: http://youtu.be/PKffm2uI4dk', '2020-01-05 18:15:31', '2020-01-05 20:15:31.591940');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (941832919, 'Writing a short test', '2020-01-05 20:15:31', '2020-01-05 20:15:31.591940');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (350169046, 'mike', 'nath@mail.com', '2020-01-05 20:15:31.592123', '2020-01-05 20:15:31.592123', '$2a$04$oEF3zg6/jEzaE4E1tZlNvOlAJGFuRuY3YWoa/23VkPiWf6gMY6aWC');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (950961012, 'Michael Example', 'michael@example.com', '2020-01-05 20:15:31.592123', '2020-01-05 20:15:31.592123', '$2a$04$wMWagrNaRf7/nyRDb5//9..2ukVModNVKX1mWC.1QdjI4vB9vVWzm');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-05 20:15:31.592207', '2020-01-05 20:15:31.592207');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-05 20:15:31.592207', '2020-01-05 20:15:31.592207')[0m
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.4ms)[0m  [1m[31mDELETE FROM "microposts";
+DELETE FROM "users";
+DELETE FROM "static_pages";
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (499495288, 'I just ate an orange!', '2020-01-05 20:05:31', '2020-01-05 20:15:31.613615');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (517500819, 'Check out the @tauday site by @mhartl: http://tauday.com', '2017-01-05 20:15:31', '2020-01-05 20:15:31.613615');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (12348100, 'Sad cats are sad: http://youtu.be/PKffm2uI4dk', '2020-01-05 18:15:31', '2020-01-05 20:15:31.613615');
+INSERT INTO "microposts" ("id", "content", "created_at", "updated_at") VALUES (941832919, 'Writing a short test', '2020-01-05 20:15:31', '2020-01-05 20:15:31.613615');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (350169046, 'mike', 'nath@mail.com', '2020-01-05 20:15:31.613857', '2020-01-05 20:15:31.613857', '$2a$04$rBeNygF43QPtjSgZjEqZc.PZ4mfYqygBjVSdcVH31AzdUHxk2wKAy');
+INSERT INTO "users" ("id", "name", "email", "created_at", "updated_at", "password_digest") VALUES (950961012, 'Michael Example', 'michael@example.com', '2020-01-05 20:15:31.613857', '2020-01-05 20:15:31.613857', '$2a$04$j63DRTDPsHQmZ3bwaO/3e.8.omf5/p5M/vsdXU.QVwWk2QW0/5QZG');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-05 20:15:31.613943', '2020-01-05 20:15:31.613943');
+INSERT INTO "static_pages" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-05 20:15:31.613943', '2020-01-05 20:15:31.613943')[0m
+  [1m[35m (3.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m

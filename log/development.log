@@ -5627,3 +5627,11 @@ To:
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mMicropost Create (141.1ms)[0m  [1m[32mINSERT INTO "microposts" ("id", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["content", "Hello there"], ["user_id", 1], ["created_at", "2020-01-05 19:26:12.167896"], ["updated_at", "2020-01-05 19:26:12.167896"]]
   [1m[35m (105.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (58.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (41.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMicropost Create (22.0ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "Lorem ipsum"], ["user_id", 1], ["created_at", "2020-01-05 19:57:25.310852"], ["updated_at", "2020-01-05 19:57:25.310852"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMicropost Load (20.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
