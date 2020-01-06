@@ -8919,3 +8919,94 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 124ms (Views: 116.3ms | ActiveRecord: 1.7ms | Allocations: 18938)
 
 
+Started GET "/users/1" for ::1 at 2020-01-06 09:00:46 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMicropost Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "microposts" WHERE "microposts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:12
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered collection of microposts/_micropost.html.erb [15 times] (Duration: 15.0ms | Allocations: 2306)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (Duration: 106.7ms | Allocations: 6107)
+  Rendered layouts/_rails_default.html.erb (Duration: 48.4ms | Allocations: 10227)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 759)
+  Rendered layouts/_footer.html.erb (Duration: 4.6ms | Allocations: 49)
+Completed 200 OK in 178ms (Views: 168.7ms | ActiveRecord: 4.1ms | Allocations: 18953)
+
+
+Started GET "/users/1?page=4" for ::1 at 2020-01-06 09:01:23 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"page"=>"4", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMicropost Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "microposts" WHERE "microposts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 15], ["OFFSET", 45]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered collection of microposts/_micropost.html.erb [5 times] (Duration: 17.4ms | Allocations: 786)
+  Rendered users/show.html.erb within layouts/application (Duration: 48.3ms | Allocations: 3817)
+  Rendered layouts/_rails_default.html.erb (Duration: 39.3ms | Allocations: 10226)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 757)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 109ms (Views: 101.7ms | ActiveRecord: 1.5ms | Allocations: 16665)
+
+
+Started GET "/users" for ::1 at 2020-01-06 09:01:27 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:6
+  Rendered collection of users/_user.html.erb [30 times] (Duration: 253.3ms | Allocations: 110559)
+  Rendered users/index.html.erb within layouts/application (Duration: 285.6ms | Allocations: 114023)
+  Rendered layouts/_rails_default.html.erb (Duration: 49.3ms | Allocations: 10230)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 202)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 51)
+Completed 200 OK in 345ms (Views: 339.1ms | ActiveRecord: 1.3ms | Allocations: 126299)
+
+
+Started GET "/users/2" for ::1 at 2020-01-06 09:01:33 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMicropost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "microposts" WHERE "microposts"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:13
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:15
+  Rendered collection of microposts/_micropost.html.erb [15 times] (Duration: 10.1ms | Allocations: 2306)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:17
+  Rendered users/show.html.erb within layouts/application (Duration: 28.1ms | Allocations: 6109)
+  Rendered layouts/_rails_default.html.erb (Duration: 35.0ms | Allocations: 10226)
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 5)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.8ms | Allocations: 757)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 49)
+Completed 200 OK in 89ms (Views: 80.4ms | ActiveRecord: 1.6ms | Allocations: 18948)
+
+
