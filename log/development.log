@@ -9010,3 +9010,195 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 89ms (Views: 80.4ms | ActiveRecord: 1.6ms | Allocations: 18948)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-01-06 10:32:43 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (80.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 41.8ms | Allocations: 1088)
+  Rendered shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 197)
+  Rendered shared/_micropost_form.html.erb (Duration: 890.8ms | Allocations: 1051)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 936.3ms | Allocations: 2797)
+  Rendered layouts/_rails_default.html.erb (Duration: 804.9ms | Allocations: 10424)
+  Rendered layouts/_shim.html.erb (Duration: 3.7ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 36.6ms | Allocations: 488)
+  Rendered layouts/_footer.html.erb (Duration: 36.2ms | Allocations: 173)
+Completed 200 OK in 2666ms (Views: 1950.0ms | ActiveRecord: 96.5ms | Allocations: 29068)
+
+
+Started POST "/microposts" for ::1 at 2020-01-06 10:33:16 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x9JJwD9cbf4cbqb18ATbfNQiYZ8eDIaqvlekPfkPNZfZxiINsLEgyn6IRs4+jqB8D0hQZY5WHqZ0F9OonkLu/w==", "micropost"=>{"content"=>""}, "commit"=>"Post"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 6.4ms | Allocations: 1083)
+  Rendered shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 317)
+  Rendered shared/_micropost_form.html.erb (Duration: 5.1ms | Allocations: 1133)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 15.5ms | Allocations: 2872)
+  Rendered layouts/_rails_default.html.erb (Duration: 38.9ms | Allocations: 10352)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 488)
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | Allocations: 173)
+Completed 200 OK in 172ms (Views: 121.8ms | ActiveRecord: 0.7ms | Allocations: 30241)
+
+
+Started GET "/" for ::1 at 2020-01-06 10:55:57 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+Completed 500 Internal Server Error in 486ms (ActiveRecord: 17.7ms | Allocations: 14740)
+
+
+  
+NoMethodError (undefined method `feed' for #<User:0x00007f544d4f6160>):
+  
+app/controllers/static_pages_controller.rb:7:in `home'
+Started GET "/" for ::1 at 2020-01-06 11:02:03 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (21.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+Completed 500 Internal Server Error in 748ms (ActiveRecord: 21.3ms | Allocations: 14801)
+
+
+  
+NoMethodError (undefined method `Micropost' for #<User:0x00007f5428071718>
+Did you mean?  microposts
+               microposts=):
+  
+app/controllers/static_pages_controller.rb:7:in `home'
+Started GET "/" for ::1 at 2020-01-06 11:03:01 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+Completed 500 Internal Server Error in 1285ms (ActiveRecord: 15.9ms | Allocations: 143549)
+
+
+  
+NameError (undefined local variable or method `id' for #<StaticPagesController:0x00007f544d322de8>):
+  
+app/controllers/static_pages_controller.rb:7:in `home'
+Started GET "/" for ::1 at 2020-01-06 11:07:23 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (67.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (108.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 271.8ms | Allocations: 1084)
+  Rendered shared/_error_messages.html.erb (Duration: 76.6ms | Allocations: 189)
+  Rendered shared/_micropost_form.html.erb (Duration: 143.5ms | Allocations: 859)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1)[0m  [["user_id", 1]]
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (338.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1) ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  Rendered collection of microposts/_micropost.html.erb [30 times] (Duration: 70.3ms | Allocations: 4740)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1)[0m  [["user_id", 1]]
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (Duration: 751.4ms | Allocations: 8521)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1232.2ms | Allocations: 11338)
+  Rendered layouts/_rails_default.html.erb (Duration: 3447.7ms | Allocations: 10376)
+  Rendered layouts/_shim.html.erb (Duration: 121.4ms | Allocations: 83)
+  Rendered layouts/_header.html.erb (Duration: 52.1ms | Allocations: 488)
+  Rendered layouts/_footer.html.erb (Duration: 87.6ms | Allocations: 173)
+Completed 200 OK in 6967ms (Views: 5246.6ms | ActiveRecord: 517.1ms | Allocations: 38595)
+
+
+Started GET "/" for ::1 at 2020-01-06 11:13:26 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (87.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (64.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 224.5ms | Allocations: 1085)
+  Rendered shared/_error_messages.html.erb (Duration: 34.8ms | Allocations: 189)
+  Rendered shared/_micropost_form.html.erb (Duration: 194.7ms | Allocations: 859)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1)[0m  [["user_id", 1]]
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (283.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1) ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  Rendered collection of microposts/_micropost.html.erb [30 times] (Duration: 70.3ms | Allocations: 4748)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1)[0m  [["user_id", 1]]
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (Duration: 540.6ms | Allocations: 8521)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1028.9ms | Allocations: 11336)
+  Rendered layouts/_rails_default.html.erb (Duration: 2201.7ms | Allocations: 10451)
+  Rendered layouts/_shim.html.erb (Duration: 19.5ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 18.6ms | Allocations: 488)
+  Rendered layouts/_footer.html.erb (Duration: 43.1ms | Allocations: 173)
+Completed 200 OK in 4969ms (Views: 3332.1ms | ActiveRecord: 435.1ms | Allocations: 37836)
+
+
+Started GET "/" for ::1 at 2020-01-06 11:20:13 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (278.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (26.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 207.6ms | Allocations: 1027)
+  Rendered shared/_error_messages.html.erb (Duration: 37.5ms | Allocations: 189)
+  Rendered shared/_micropost_form.html.erb (Duration: 88.7ms | Allocations: 806)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1)[0m  [["user_id", 1]]
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (274.8ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1) ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  Rendered collection of microposts/_micropost.html.erb [30 times] (Duration: 70.5ms | Allocations: 4726)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1)[0m  [["user_id", 1]]
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (Duration: 522.3ms | Allocations: 8026)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1097.6ms | Allocations: 10718)
+  Rendered layouts/_rails_default.html.erb (Duration: 2579.2ms | Allocations: 10424)
+  Rendered layouts/_shim.html.erb (Duration: 62.2ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 20.0ms | Allocations: 487)
+  Rendered layouts/_footer.html.erb (Duration: 41.6ms | Allocations: 173)
+Completed 200 OK in 5854ms (Views: 4219.2ms | ActiveRecord: 580.6ms | Allocations: 25481)
+
+
+Started GET "/" for ::1 at 2020-01-06 11:22:55 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (51.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[35m (45.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 205.0ms | Allocations: 1085)
+  Rendered shared/_error_messages.html.erb (Duration: 101.5ms | Allocations: 189)
+  Rendered shared/_micropost_form.html.erb (Duration: 182.7ms | Allocations: 856)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1)[0m  [["user_id", 1]]
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (166.6ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1) ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  Rendered collection of microposts/_micropost.html.erb [30 times] (Duration: 131.2ms | Allocations: 4728)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts" WHERE "microposts"."user_id" = ? AND (user_id = 1)[0m  [["user_id", 1]]
+  ↳ app/views/shared/_feed.html.erb:5
+  Rendered shared/_feed.html.erb (Duration: 540.4ms | Allocations: 8486)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 981.5ms | Allocations: 11286)
+  Rendered layouts/_rails_default.html.erb (Duration: 2264.3ms | Allocations: 10353)
+  Rendered layouts/_shim.html.erb (Duration: 20.3ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 19.9ms | Allocations: 488)
+  Rendered layouts/_footer.html.erb (Duration: 31.9ms | Allocations: 173)
+Completed 200 OK in 4955ms (Views: 3440.8ms | ActiveRecord: 264.1ms | Allocations: 37621)
+
+
