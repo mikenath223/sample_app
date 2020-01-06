@@ -9517,3 +9517,10 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 156ms (Views: 148.0ms | ActiveRecord: 1.5ms | Allocations: 24007)
 
 
+DEPRECATION WARNING: Single arity template handlers are deprecated. Template handlers must
+now accept two parameters, the view object and the source for the view object.
+Change:
+  >> JbuilderHandler.call(template)
+To:
+  >> JbuilderHandler.call(template, source)
+ (called from <top (required)> at /home/mike/Documents/Microverse-Ruby/sample_app/config/environment.rb:5)
