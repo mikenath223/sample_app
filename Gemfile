@@ -26,6 +26,8 @@ gem 'sass-rails', '6.0.0'
 gem 'turbolinks', '5.0.1'
 gem 'uglifier', '3.2.0'
 gem 'webpacker', '~> 4.0'
+gem 'carrierwave', '1.2.2'
+gem 'mini_magick', '4.7.0'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -40,6 +42,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'fog', '1.42'
 end
 
 group :test do
