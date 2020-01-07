@@ -6,7 +6,7 @@
   <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-    <% if Rails.env.production %>
+    <% if Rails.env.production? %>
       <small>Image upload not functional in production environment yet.</small>
     <% end %>
   </span>
