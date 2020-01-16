@@ -11000,3 +11000,111 @@ UserMailer#account_activation: processed outbound mail in 29.4ms
 Completed 200 OK in 63ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 11948)
 
 
+Started GET "/" for ::1 at 2020-01-16 11:18:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1336.9ms | Allocations: 95750)
+  Rendered layouts/_rails_default.html.erb (Duration: 423.6ms | Allocations: 60807)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 411)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 180)
+Completed 200 OK in 1778ms (Views: 1771.3ms | ActiveRecord: 0.0ms | Allocations: 159870)
+
+
+Started GET "/signup" for ::1 at 2020-01-16 11:18:35 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 199)
+  Rendered users/new.html.erb within layouts/application (Duration: 22.3ms | Allocations: 2694)
+  Rendered layouts/_rails_default.html.erb (Duration: 132.9ms | Allocations: 28749)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 5.4ms | Allocations: 434)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 180)
+Completed 200 OK in 229ms (Views: 172.6ms | ActiveRecord: 0.0ms | Allocations: 43434)
+
+
+Started POST "/signup" for ::1 at 2020-01-16 11:19:30 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ITAEcNlaRcgRCZmt+EN9psPLrK2Dvpfw0V6rkI9Pc4duzbMoCSQS+QoWGBEy6gaHPbbGedS4iqE9KRbBYF/1kA==", "user"=>{"name"=>"miky", "email"=>"miky@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Exists? (9.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "miky@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[36mUser Create (10.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "miky"], ["email", "miky@mail.com"], ["created_at", "2020-01-16 10:19:30.202441"], ["updated_at", "2020-01-16 10:19:30.202441"], ["password_digest", "$2a$10$YDZdQFBOclYiklwZKYkos.M1pvDBPnWVrMbX4XT6QEzq0o65sFtRG"], ["activation_digest", "$2a$10$RlqO2n41/EaOLc.u/zFYPOquCI0bwO4pM/1fSudNBvjXOB/eGFoqm"]]
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  [1m[35m (18.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:23:in `create'
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (Duration: 5.1ms | Allocations: 200)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (Duration: 1.1ms | Allocations: 170)
+UserMailer#account_activation: processed outbound mail in 32.0ms
+Delivered mail 5e2038b25ced9_126c2b20a461d04c683c7@mike-VirtualBox.mail (31.5ms)
+Date: Thu, 16 Jan 2020 11:19:30 +0100
+From: noreply@example.com
+To: miky@mail.com
+Message-ID: <5e2038b25ced9_126c2b20a461d04c683c7@mike-VirtualBox.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e2038b25a0da_126c2b20a461d04c682dc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e2038b25a0da_126c2b20a461d04c682dc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi miky,
+
+Welcome to the Sample App! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/63RLV3GryNDBD1gvZwKOLg/edit?email=miky%40mail.com
+
+----==_mimepart_5e2038b25a0da_126c2b20a461d04c682dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Sample App</h1>
+
+<p>Hi miky,</p>
+
+<p>
+Welcome to the Sample App! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/63RLV3GryNDBD1gvZwKOLg/edit?email=miky%40mail.com">Activate</a>
+  </body>
+</html>
+
+----==_mimepart_5e2038b25a0da_126c2b20a461d04c682dc--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 330ms (ActiveRecord: 38.8ms | Allocations: 21172)
+
+
+Started GET "/" for ::1 at 2020-01-16 11:19:30 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 919)
+  Rendered layouts/_rails_default.html.erb (Duration: 32.5ms | Allocations: 10305)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 106)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 0.0ms | Allocations: 13110)
+
+
