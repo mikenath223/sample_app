@@ -11108,3 +11108,43 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 0.0ms | Allocations: 13110)
 
 
+Started GET "/account_activations/63RLV3GryNDBD1gvZwKOLg/edit?email=miky%40mail.com" for ::1 at 2020-01-16 11:38:55 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"miky@mail.com", "id"=>"63RLV3GryNDBD1gvZwKOLg"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "miky@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/account_activations_controller.rb:3:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/account_activations_controller.rb:5:in `edit'
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE "users" SET "activated" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["activated", 1], ["updated_at", "2020-01-16 10:38:55.590249"], ["id", 101]]
+  ↳ app/controllers/account_activations_controller.rb:5:in `edit'
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/account_activations_controller.rb:5:in `edit'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/account_activations_controller.rb:6:in `edit'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-01-16 10:38:55.618006"], ["activated_at", "2020-01-16 10:38:55.617624"], ["id", 101]]
+  ↳ app/controllers/account_activations_controller.rb:6:in `edit'
+  [1m[35m (70.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/account_activations_controller.rb:6:in `edit'
+Redirected to http://localhost:3000/users/101
+Completed 302 Found in 284ms (ActiveRecord: 90.7ms | Allocations: 16273)
+
+
+Started GET "/users/101" for ::1 at 2020-01-16 11:38:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mMicropost Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "microposts" WHERE "microposts"."user_id" = ? LIMIT ?[0m  [["user_id", 101], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered users/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1018)
+  Rendered layouts/_rails_default.html.erb (Duration: 50.1ms | Allocations: 10417)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 101], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:20:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.8ms | Allocations: 900)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 51)
+Completed 200 OK in 158ms (Views: 73.8ms | ActiveRecord: 4.4ms | Allocations: 21959)
+
+
