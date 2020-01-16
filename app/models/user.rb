@@ -2,7 +2,6 @@ class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
   attr_accessor :remember_token, :activation_token
 
-  before_save :downcase_email
   before_create :create_activation_digest
 
   validates :name, presence: true, length: { maximum: 50 }
@@ -47,7 +46,7 @@ class User < ApplicationRecord
     # update_attribute(:activated,    true)
     # update_attribute(:activated_at, Time.zone.now)
     # Change two lines above to single line below
-    update_columns(activated: FILL_IN, activated_at: FILL_IN)
+    update_columns(activated: true, activated_at: Time.zone.now)
   end
 
   # Sends activation email.
