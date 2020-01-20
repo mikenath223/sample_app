@@ -8,6 +8,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token
 
   before_create :create_activation_digest
+  before_save { email.downcase! }
 
   validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -57,6 +58,21 @@ class User < ApplicationRecord
   # Sends activation email.
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  # Follows a user.
+  def follow(other_user)
+    following << other_user
+  end
+
+  # Unfollows a user.
+  def unfollow(other_user)
+    following.delete(other_user)
+  end
+
+  # Returns true if the current user is following the other user.
+  def following?(other_user)
+    following.include?(other_user)
   end
 
   private 
