@@ -26,7 +26,7 @@ gem 'sass-rails', '6.0.0'
 gem 'turbolinks', '5.0.1'
 gem 'uglifier', '3.2.0'
 gem 'webpacker', '~> 4.0'
-gem 'carrierwave', '1.2.2'
+gem 'carrierwave', '1.3.2'
 gem 'mini_magick', '4.7.0'
 
 # Use sqlite3 as the database for Active Record
